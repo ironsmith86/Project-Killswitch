@@ -1,0 +1,24 @@
+{
+  "name": "project-killswitch",
+  "version": "0.0.1",
+  "description": "Phonecall engagement app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironsmith86/Project-Killswitch.git"
+  },
+  "author": "Nick & Sparks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ironsmith86/Project-Killswitch/issues"
+  },
+  "homepage": "https://github.com/ironsmith86/Project-Killswitch#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
