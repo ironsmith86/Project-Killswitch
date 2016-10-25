@@ -1,4 +1,50 @@
+$dark: #16203d;
+$mid: #323f68;
+$light: #323f68;
+
+$high: #f84f68;
+$medium: #fcb326;
+$low: #28a9ad;
+
+@mixin main-text {
+  color: darken(#fff, 40%);
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:before, &:after {
+    box-sizing: inherit;
+  }
+}
+
 body {
-  background-color: green;
-  display: block;
+  background: $dark;
+  @include main-text;
+}
+
+.container {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+/* === NAV === */
+
+.main-header {
+  background: $mid;
+  &__title {
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+  }
 }

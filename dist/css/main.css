@@ -1,3 +1,29 @@
+* {
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: inherit; }
+
 body {
-  background-color: green;
-  display: block; }
+  background: #16203d;
+  color: #999999;
+  font-family: sans-serif;
+  font-size: 62.5%; }
+
+.container {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto; }
+
+h1 {
+  font-size: 2em; }
+
+/* === NAV === */
+.main-header {
+  background: #323f68; }
+  .main-header__title {
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px; }

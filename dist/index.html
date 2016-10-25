@@ -5,14 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <ul class="checklist">
-    <li>nick</li>
-    <li>smith</li>
-    <li>is</li>
-    <li>gay</li>
-  </ul>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="main-header__title">My To-Do List</h1>
+      <i class="fa fa-bars main-header__menu-icon"></i>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">Hello1
+            <ul>
+              <li class="main-nav__item main-nav__item--secondary"><a class="main-nav__link" href="#">Hello2</a></li>
+              <li class="main-nav__item main-nav__item--secondary"><a class="main-nav__link" href="#">World2</a></li>
+              <li class="main-nav__item main-nav__item--secondary"><a class="main-nav__link" href="#">Hello2</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">World1</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Hello1</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <button><i class="fa fa-plus"></i></button>
+  <section class="container">
+    <section>
+      <h2>TODAY</h2>
+      <ul>
+        <li>
+          <label for="item1">
+            <input id="item1" type="checkbox">
+          </label>
+          <p>Buy milk when near Tesco. And a pasty</p>
+          <div></div>
+          <span>
+            <i class="fa fa-pencil"></i>
+          </span>
+          <span>
+            <i class="fa fa-trash"></i>
+          </span>
+        </li>
+        <li>
+          <label for="item1">
+            <input id="item1" type="checkbox">
+          </label>
+          <p>Kick the cat into orbit and send it down the shop to get its own milk.</p>
+          <div></div>
+          <span>
+            <i class="fa fa-pencil"></i>
+          </span>
+          <span>
+            <i class="fa fa-trash"></i>
+          </span>
+        </li>
+        <li>
+          <label for="item1">
+            <input id="item1" type="checkbox">
+          </label>
+          <p>Buy pinking shears to cut the Toad into tiny pieces</p>
+          <div></div>
+          <span>
+            <i class="fa fa-pencil"></i>
+          </span>
+          <span>
+            <i class="fa fa-trash"></i>
+          </span>
+        </li>
+      </ul>
+    </section>
+    <section></section>
+    <section></section>
+    <section>
+      <form action="">
+        <label for="task"></label>
+        <input id="task" type="text" placeholder="Task Description">
+        <label for="date"></label>
+        <input id="date" type="date">
+        <select>
+          <option value="Orange">
+            <div>Orange</div>
+          </option>
+          <option value="Green">
+            <div>Green</div>
+          </option>
+          <option value="Red">
+            <div>Red</div>
+          </option>
+        </select>
+        <button type="button" name="button">Add</button>
+      </form>
+    </section>
+  </section>
 </body>
 </html>
