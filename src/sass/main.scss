@@ -1,44 +1,50 @@
 $dark: #16203d;
 $mid: #323f68;
-$light: #323f68;
+$light: #4b597f;
 
 $high: #f84f68;
 $medium: #fcb326;
 $low: #28a9ad;
 
-@mixin main-text {
-  color: darken(#fff, 40%);
-  font-family: sans-serif;
-  font-size: 62.5%;
-}
+$grey: darken(#fff, 40%);
 
 * {
   box-sizing: border-box;
+  font-size: 62.5%;
 
   &:before, &:after {
     box-sizing: inherit;
   }
+
 }
 
 body {
   background: $dark;
-  @include main-text;
+  color: $grey;
+  font-family: sans-serif;
+
+  .container {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
 }
 
-.container {
-  position: relative;
-  max-width: 320px;
-  margin: 0 auto;
-}
 
-h1 {
-  font-size: 2em;
-}
 
-/* === NAV === */
+
+
+/* === HEADER === */
 
 .main-header {
+
   background: $mid;
+
   &__title {
     height: 20px;
     margin: auto;
@@ -47,4 +53,137 @@ h1 {
     bottom: 0;
     right: 15px;
   }
+
+  &__menu-icon {
+    font-size: 2.5em;
+    margin: 10px;
+    cursor: pointer;
+  }
+
 }
+
+/* === NAV === */
+
+.main-nav {
+  background-color: $dark;
+  font-size: 2.5em;
+  width: 200px;
+  position: absolute;
+  left: -200px;
+
+}
+
+/* === Task List === */
+
+.task-list {
+
+  &__title {
+    font-size: 1.5em;
+  }
+
+}
+
+.task {
+
+    position: relative;
+    height: 65px;
+    margin-bottom: 2px;
+
+    &__main {
+      background-color: $light;
+      position: relative;
+      height: 100%;
+    }
+
+    &__checkbox-area {
+      display: inline-block;
+      position: relative;
+      width: 50px;
+      height: 100%;
+      background-color: $mid;
+      cursor: pointer;
+     }
+
+    &__checkbox-input {
+      display: none;
+
+      &:checked ~ i {
+        background-color: $grey;
+      }
+    }
+
+    &__checkbox {
+      display: block;
+      height: 30px;
+      width: 30px;
+      border: 3px solid $grey;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      font-size: 20px;
+      color: $mid;
+      text-align: center;
+      padding-top: 2px;
+    }
+
+    &__description {
+      position: absolute;
+      height: 15px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 65px;
+    }
+
+    &__priority {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 12px;
+      height: 100%;
+      background-color: $grey;
+
+      &--low {
+        background-color: $low;
+      }
+
+      &--medium {
+        background-color: $medium;
+      }
+
+      &--high {
+        background-color: $high;
+      }
+
+    }
+
+    &__control {
+      position: absolute;
+      top: 0;
+      right: -145px;
+      height: 100%;
+      width: 145px;
+      text-align: center;
+    }
+
+    &__button {
+      background: none;
+      border: none;
+      position: relative;
+      top: 8px;
+      width: 42%;
+      font-size: 35px;
+      color: $grey;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+    }
+
+  }

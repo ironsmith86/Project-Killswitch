@@ -1,23 +1,21 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 62.5%; }
   *:before, *:after {
     box-sizing: inherit; }
 
 body {
   background: #16203d;
   color: #999999;
-  font-family: sans-serif;
-  font-size: 62.5%; }
+  font-family: sans-serif; }
+  body .container {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto; }
+  body h1 {
+    font-size: 1.5em; }
 
-.container {
-  position: relative;
-  max-width: 320px;
-  margin: 0 auto; }
-
-h1 {
-  font-size: 2em; }
-
-/* === NAV === */
+/* === HEADER === */
 .main-header {
   background: #323f68; }
   .main-header__title {
@@ -27,3 +25,93 @@ h1 {
     top: 0;
     bottom: 0;
     right: 15px; }
+  .main-header__menu-icon {
+    font-size: 2.5em;
+    margin: 10px;
+    cursor: pointer; }
+
+/* === NAV === */
+.main-nav {
+  background-color: #16203d;
+  font-size: 2.5em;
+  width: 200px;
+  position: absolute;
+  left: -200px; }
+
+/* === Task List === */
+.task-list__title {
+  font-size: 1.5em; }
+
+.task {
+  position: relative;
+  height: 65px;
+  margin-bottom: 2px; }
+  .task__main {
+    background-color: #4b597f;
+    position: relative;
+    height: 100%; }
+  .task__checkbox-area {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 100%;
+    background-color: #323f68;
+    cursor: pointer; }
+  .task__checkbox-input {
+    display: none; }
+    .task__checkbox-input:checked ~ i {
+      background-color: #999999; }
+  .task__checkbox {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 3px solid #999999;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+    color: #323f68;
+    text-align: center;
+    padding-top: 2px; }
+  .task__description {
+    position: absolute;
+    height: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 65px; }
+  .task__priority {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 100%;
+    background-color: #999999; }
+    .task__priority--low {
+      background-color: #28a9ad; }
+    .task__priority--medium {
+      background-color: #fcb326; }
+    .task__priority--high {
+      background-color: #f84f68; }
+  .task__control {
+    position: absolute;
+    top: 0;
+    right: -145px;
+    height: 100%;
+    width: 145px;
+    text-align: center; }
+  .task__button {
+    background: none;
+    border: none;
+    position: relative;
+    top: 8px;
+    width: 42%;
+    font-size: 35px;
+    color: #999999;
+    cursor: pointer; }
+    .task__button:focus {
+      outline: none; }
